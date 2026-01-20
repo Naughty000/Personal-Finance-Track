@@ -3,109 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Balance Sheet - AcmeWidgetCorp</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Personal Finance Tracker | React.js Application</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="finance.css">
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
-<body>
-    <div class="con">
-        <!-- Header Section -->
-        <header class="sheet-header">
-            <h1 class="sheet-title">Balance Sheet</h1>
-            <h4 class="company-name"><b>AcmeWidgetCorp</b></h4>
-            <div class="year-indicator" aria-label="Financial Years">
-                <span class="year">2019</span>
-                <span class="year">2020</span>
-                <span class="year">2021</span>
-            </div>
-        </header>
-
-        <!-- Assets Section -->
-        <section class="financial-section">
-            <h3 class="section-title">Assets</h3>
-            <div class="table-container">
-                <table class="financial-table assets-table">
-                    <tbody>
-                        <!-- Cash -->
-                        <tr class="asset-row">
-                            <th scope="row" class="asset-name">Cash</th>
-                            <td class="amount" data-year="2019">$25</td>
-                            <td class="amount" data-year="2020">$30</td>
-                            <td class="amount" data-year="2021">$28</td>
-                        </tr>
-                        <tr class="description-row">
-                            <td colspan="4" class="asset-description">
-                                <i>This is the cash we currently have on hand.</i>
-                            </td>
-                        </tr>
-
-                        <!-- Checking -->
-                        <tr class="asset-row">
-                            <th scope="row" class="asset-name">Checking</th>
-                            <td class="amount" data-year="2019">$54</td>
-                            <td class="amount" data-year="2020">$56</td>
-                            <td class="amount" data-year="2021">$53</td>
-                        </tr>
-                        <tr class="description-row">
-                            <td colspan="4" class="asset-description">
-                                <i>Our primary transactional account.</i>
-                            </td>
-                        </tr>
-
-                        <!-- Savings -->
-                        <tr class="asset-row">
-                            <th scope="row" class="asset-name">Savings</th>
-                            <td class="amount" data-year="2019">$500</td>
-                            <td class="amount" data-year="2020">$650</td>
-                            <td class="amount" data-year="2021">$728</td>
-                        </tr>
-                        <tr class="description-row">
-                            <td colspan="4" class="asset-description">
-                                <i>Funds set aside for emergencies.</i>
-                            </td>
-                        </tr>
-
-                        <!-- Total Assets -->
-                        <tr class="total-row">
-                            <th scope="row" class="total-label">Total</th>
-                            <td class="total-amount" data-year="2019"><b>$579</b></td>
-                            <td class="total-amount" data-year="2020"><b>$736</b></td>
-                            <td class="total-amount" data-year="2021"><b>$809</b></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-
-        <!-- Net Worth Section -->
-        <section class="financial-section">
-            <h3 class="section-title">Net Worth</h3>
-            <div class="table-container">
-                <table class="financial-table networth-table">
-                    <tbody>
-                        <tr class="total-row">
-                            <th scope="row" class="total-label">Total</th>
-                            <td class="networth-amount" data-year="2019"><b>$-171</b></td>
-                            <td class="networth-amount" data-year="2020"><b>$136</b></td>
-                            <td class="networth-amount" data-year="2021"><b>$334</b></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-
-        <!-- Financial Summary (Optional) -->
-        <footer class="financial-summary">
-            <div class="summary-item">
-                <span class="summary-label">Growth (2019-2021):</span>
-                <span class="summary-value positive">+39.7%</span>
-            </div>
-        </footer>
-    </div>
-
-    <!-- Loading State (Optional) -->
-    <div class="loading-overlay" aria-hidden="true">
-        <div class="loading-spinner"></div>
-    </div>
+<body class="bg-gray-50">
+    <div id="root"></div>
+    
+    <script type="text/babel" src="finance.js"></script>
 </body>
 </html>
-
